@@ -1,0 +1,4 @@
+name,amount,profile,type,bus
+electricity-demand,1,electricity-load-profile,load,electricity-bus
+heat-demand,1,heat-load-profile,load,heat-bus
+hot-water-demand,1,hot-water-load-profile,load,heat-bus-hw

@@ -1,0 +1,5 @@
+name,type,carrier,tech,capacity,marginal_cost,efficiency,from_bus,to_bus
+electric-heater1,conversion,heat,boiler,50,0,0.95,electricity-bus,heat-bus
+electric-heater2,conversion,heat,boiler,50,0,0.95,electricity-bus,heat-bus-hw
+grid-to-hh,conversion,electricity,cable,1000,10,1,electricity-bus-grid,electricity-bus
+hh-to-grid,conversion,electricity,cable,1000,-5,1,electricity-bus,electricity-bus-grid
