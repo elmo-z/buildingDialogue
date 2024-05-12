@@ -1,0 +1,3 @@
+name,type,carrier,tech,capacity,marginal_cost,efficiency,from_bus,to_bus
+gas-boiler,conversion,gas,boiler,50,5,0.7,gas-bus-grid,heat-bus
+heat-to-hw,conversion,heat,,1000,0,1,heat-bus,heat-bus-hw

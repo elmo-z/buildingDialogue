@@ -12,11 +12,14 @@ from oemof.tabular.constraint_facades import CONSTRAINT_TYPE_MAP
 from oemof.tabular.facades import TYPEMAP
 from oemof.tabular.postprocessing import calculations
 
+# scenario definition
+scenario = "gas"
+
 # path to directory with datapackage to load
-datapackage_dir = "./pv_heatpump/"
+datapackage_dir = "./" + scenario + "/"
 # create  path for results (we use the datapackage_dir to store results)
 results_path = os.path.join(
-    os.path.expanduser("/home/k/Schreibtisch/ioew/oemof/"), "oemof-results/pv_heatpump"
+    os.path.expanduser("/home/k/Schreibtisch/ioew/buildingDialogue/git-repo/buildingDialogue/oemof-results/"), scenario
 )
 if not os.path.exists(results_path):
     os.makedirs(results_path)
