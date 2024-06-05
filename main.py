@@ -1,8 +1,8 @@
 """
 """
 
-import importlib.resources
 import os
+from pathlib import Path
 
 from oemof.solph import EnergySystem, Model, processing
 
@@ -13,20 +13,14 @@ from oemof.tabular.facades import TYPEMAP
 from oemof.tabular.postprocessing import calculations
 
 # scenario definition
-scenario = "gas"
-
-# path to directory with datapackage to load
-datapackage_dir = "./" + scenario + "/"
-# create  path for results (we use the datapackage_dir to store results)
-results_path = os.path.join(
-    os.path.expanduser("/home/k/Schreibtisch/ioew/buildingDialogue/git-repo/buildingDialogue/oemof-results/"), scenario
-)
-if not os.path.exists(results_path):
-    os.makedirs(results_path)
+SCENARIO = "pv_heatpump"
+DATAPACKAGES_PATH = Path(__file__).parent
+SCENARIO_DATAPACKAGE = DATAPACKAGES_PATH / SCENARIO / "datapackage.json"
+RESULTS_PATH = Path(__file__).parent / "oemof-results"
 
 # create energy system object
 es = EnergySystem.from_datapackage(
-    os.path.join(datapackage_dir, "datapackage.json"),
+    str(SCENARIO_DATAPACKAGE),
     attributemap={},
     typemap=TYPEMAP,
 )
@@ -36,7 +30,7 @@ m = Model(es)
 
 # add constraints from datapackage to the model
 m.add_constraints_from_datapackage(
-    os.path.join(datapackage_dir, "datapackage.json"),
+    str(SCENARIO_DATAPACKAGE),
     constraint_type_map=CONSTRAINT_TYPE_MAP,
 )
 
@@ -51,4 +45,4 @@ es.results = m.results()
 # now we use the write results method to write the results in oemof-tabular
 # format
 postprocessed_results = calculations.run_postprocessing(es)
-postprocessed_results.to_csv(os.path.join(results_path, "results.csv"))
+postprocessed_results.to_csv(str(RESULTS_PATH / "results.csv"))
