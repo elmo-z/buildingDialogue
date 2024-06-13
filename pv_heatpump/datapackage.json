@@ -412,17 +412,17 @@
                         "format": "default"
                     },
                     {
-                        "name": "electricity-load-profile",
+                        "name": "3P-SEK2",
                         "type": "number",
                         "format": "default"
                     },
                     {
-                        "name": "heat-load-profile",
+                        "name": "3P",
                         "type": "number",
                         "format": "default"
                     },
                     {
-                        "name": "hot-water-load-profile",
+                        "name": "heat_profile",
                         "type": "number",
                         "format": "default"
                     }
@@ -447,7 +447,7 @@
                         "format": "default"
                     },
                     {
-                        "name": "pv-profile",
+                        "name": "PV-H35A0",
                         "type": "number",
                         "format": "default"
                     }
