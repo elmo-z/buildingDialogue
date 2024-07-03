@@ -1,4 +1,4 @@
 name,amount,profile,type,bus
-electricity-demand,1,3P-SEK2,load,electricity-bus
-heat-demand,6000000,heat_profile,load,heat-bus
-hot-water-demand,1,3P,load,heat-bus-hw
+electricity-demand,3000,EL-SEK2P3,load,electricity-bus
+heat-demand,6000,heatProfile,load,heat-bus
+hot-water-demand,1,HW-P3,load,heat-bus-hw

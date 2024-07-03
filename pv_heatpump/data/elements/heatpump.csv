@@ -1,2 +1,2 @@
 name,type,carrier,tech,capacity,efficiency,from_bus,to_bus
-heat-pump,conversion,heat,air,7,cop,electricity-bus,heat-bus
+heat-pump,conversion,heat,air,6,copProfile,electricity-bus,heat-bus

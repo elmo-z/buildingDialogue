@@ -412,20 +412,21 @@
                         "format": "default"
                     },
                     {
-                        "name": "3P-SEK2",
+                        "name": "heatProfile",
                         "type": "number",
                         "format": "default"
                     },
                     {
-                        "name": "3P",
+                        "name": "HW-P3",
                         "type": "number",
                         "format": "default"
                     },
                     {
-                        "name": "heat_profile",
+                        "name": "EL-SEK2P3",
                         "type": "number",
                         "format": "default"
                     }
+
                 ],
                 "missingValues": [
                     ""
@@ -472,7 +473,7 @@
                         "format": "default"
                     },
                     {
-                        "name": "cop",
+                        "name": "copProfile",
                         "type": "number",
                         "format": "default"
                     }
