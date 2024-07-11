@@ -1,2 +1,3 @@
 name,carrier,tech,storage_capacity,capacity,capacity_cost,storage_capacity_initial,type,bus
-el-storage1,lithium,battery,10,1,,0.5,storage,electricity-bus
+el-storage,lithium,battery,10,1,,0,storage,electricity-bus
+heat-storage,water,tank,60,6,,0,storage,heat-bus
