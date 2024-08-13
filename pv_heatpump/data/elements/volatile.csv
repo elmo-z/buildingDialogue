@@ -1,2 +1,0 @@
-name,type,carrier,tech,capacity,capacity_cost,bus,marginal_cost,profile,output_parameters
-pv,volatile,solar,pv,2,,electricity-bus,0,PV-H35A0,{}

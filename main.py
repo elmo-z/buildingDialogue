@@ -10,10 +10,10 @@ from oemof.solph import EnergySystem, Model, processing
 from oemof.tabular import datapackage  # noqa
 from oemof.tabular.constraint_facades import CONSTRAINT_TYPE_MAP
 from oemof.tabular.facades import TYPEMAP
-from oemof.tabular.postprocessing import calculations
+from oemof.tabular.postprocessing import calculations, core
 
 # scenario definition
-SCENARIO = "pv_heatpump"
+SCENARIO = "eprom"
 DATAPACKAGES_PATH = Path(__file__).parent
 SCENARIO_DATAPACKAGE = DATAPACKAGES_PATH / SCENARIO / "datapackage.json"
 RESULTS_PATH = Path(__file__).parent / "oemof-results"
@@ -46,3 +46,9 @@ es.results = m.results()
 # format
 postprocessed_results = calculations.run_postprocessing(es)
 postprocessed_results.to_csv(str(RESULTS_PATH / "results.csv"))
+
+
+#calculator = core.Calculator(es.params, es.results)
+#aggregated_flows = calculations.AggregatedFlows(calculator, from_nodes=["heat-pump", "solar-thermal"], resample_mode="1min").result
+#aggregated_flows.to_csv('test.csv')
+#print(aggregated_flows)

@@ -1,5 +1,0 @@
-name,type,balanced
-heat-bus,bus,true
-heat-bus-hw,bus,true
-electricity-bus-grid,bus,false
-gas-bus-grid,bus,false
