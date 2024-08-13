@@ -1,0 +1,4 @@
+name,type,balanced
+bus_heat,bus,true
+bus_hotwater,bus,true
+bus_electricity,bus,true

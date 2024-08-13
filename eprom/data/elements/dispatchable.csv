@@ -1,0 +1,2 @@
+name,type,carrier,tech,capacity,bus,marginal_cost
+dispatchable_grid,dispatchable,electricity,,10000,bus_electricity,0.3

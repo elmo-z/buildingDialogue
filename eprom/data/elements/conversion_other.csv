@@ -1,0 +1,3 @@
+name,type,carrier,tech,capacity,efficiency,from_bus,to_bus
+conversion_ehz,conversion,heat,boiler,10000000,0.95,bus_electricity,bus_heat
+conversion_fws,conversion,heat,exchanger,10000000,0.95,bus_heat,bus_hotwater
