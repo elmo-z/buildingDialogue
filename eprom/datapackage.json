@@ -628,6 +628,11 @@
                         "name": "profile_load",
                         "type": "number",
                         "format": "default"
+                    },
+                    {
+                        "name": "profile_STH_load",
+                        "type": "number",
+                        "format": "default"
                     }
 
                 ],
@@ -677,6 +682,11 @@
                     },
                     {
                         "name": "profile_PV",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "profile_STH",
                         "type": "number",
                         "format": "default"
                     }
