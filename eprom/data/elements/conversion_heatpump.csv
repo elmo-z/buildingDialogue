@@ -1,4 +1,4 @@
 name,type,carrier,tech,capacity,efficiency,from_bus,to_bus
 conversion_heatpump_air,conversion,heat,air-to-water,0,profile_COP_air,bus_electricity,bus_heat
-conversion_heatpump_brine,conversion,heat,brine-to-water,6,profile_COP_brine,bus_electricity,bus_heat
+conversion_heatpump_brine,conversion,heat,brine-to-water,0,profile_COP_brine,bus_electricity,bus_heat
 conversion_heatpump_water,conversion,heat,water-to-water,0,profile_COP_water,bus_electricity,bus_heat

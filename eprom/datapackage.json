@@ -35,6 +35,61 @@
                 "foreignKeys": []
             }
         },
+        {
+            "path": "data/elements/commodity_gas.csv",
+            "profile": "tabular-data-resource",
+            "name": "commodity_gas",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "bus",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "marginal_cost",
+                        "type": "number",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ],
+                "primaryKey": "bus",
+                "foreignKeys": [
+                    {
+                        "fields": "bus",
+                        "reference": {
+                            "resource": "bus",
+                            "fields": "name"
+                        }
+                    }            
+                ]
+            }
+        },         
 	{
             "path": "data/elements/conversion_heatpump.csv",
             "profile": "tabular-data-resource",
@@ -112,7 +167,85 @@
                     }
                 ]
             }
-        },     
+        },  
+	{
+            "path": "data/elements/conversion_ntk.csv",
+            "profile": "tabular-data-resource",
+            "name": "conversion_ntk",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "tech",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "capacity",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "efficiency",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "from_bus",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "to_bus",
+                        "type": "string",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ],
+                "primaryKey": "name",
+                "foreignKeys": [
+                    {
+                        "fields": "from_bus",
+                        "reference": {
+                            "resource": "bus",
+                            "fields": "name"
+                        }
+                    },
+                     {
+                        "fields": "to_bus",
+                        "reference": {
+                            "resource": "bus",
+                            "fields": "name"
+                        }
+                    },              
+                    {
+                        "fields": "efficiency",
+                        "reference": {
+                            "resource": "profile_ntk"
+                        }
+                    }
+                ]
+            }
+        },             
         {
             "path": "data/elements/conversion_other.csv",
             "profile": "tabular-data-resource",
@@ -503,6 +636,31 @@
                 ]
             }
         },
+        {
+            "path": "data/sequences/profile_ntk.csv",
+            "profile": "tabular-data-resource",
+            "name": "profile_ntk",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "timeindex",
+                        "type": "datetime",
+                        "format": "default"
+                    },
+                    {
+                        "name": "profile_NTK",
+                        "type": "number",
+                        "format": "default"
+                    }                                     
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        },  
         {
             "path": "data/sequences/profile_volatile.csv",
             "profile": "tabular-data-resource",
