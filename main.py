@@ -47,8 +47,7 @@ es.results = m.results()
 postprocessed_results = calculations.run_postprocessing(es)
 postprocessed_results.to_csv(str(RESULTS_PATH / "results.csv"))
 
-
 #calculator = core.Calculator(es.params, es.results)
-#aggregated_flows = calculations.AggregatedFlows(calculator, from_nodes=["heat-pump", "solar-thermal"], resample_mode="1min").result
-#aggregated_flows.to_csv('test.csv')
+#aggregated_flows = calculations.AggregatedFlows(calculator, from_nodes=["storage_heat", "conversion_heatpump_air"], resample_mode="1min").result
+#aggregated_flows.to_csv(str(RESULTS_PATH / 'flows.csv'))
 #print(aggregated_flows)

@@ -3,3 +3,5 @@ bus_heat,bus,true
 bus_hotwater,bus,true
 bus_electricity,bus,true
 bus_gas,bus,true
+bus_firewood,bus,true
+bus_woodpellets,bus,true

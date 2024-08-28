@@ -36,9 +36,9 @@
             }
         },
         {
-            "path": "data/elements/commodity_gas.csv",
+            "path": "data/elements/commodities.csv",
             "profile": "tabular-data-resource",
-            "name": "commodity_gas",
+            "name": "commodities",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
@@ -91,9 +91,9 @@
             }
         },         
 	{
-            "path": "data/elements/conversion_heatpump.csv",
+            "path": "data/elements/conversion_heatpump_boiler.csv",
             "profile": "tabular-data-resource",
-            "name": "conversion_heatpump",
+            "name": "conversion_heatpump_boiler",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
@@ -162,90 +162,12 @@
                     {
                         "fields": "efficiency",
                         "reference": {
-                            "resource": "profile_cop"
+                            "resource": "profile_efficiency"
                         }
                     }
                 ]
             }
-        },  
-	{
-            "path": "data/elements/conversion_ntk.csv",
-            "profile": "tabular-data-resource",
-            "name": "conversion_ntk",
-            "format": "csv",
-            "mediatype": "text/csv",
-            "encoding": "utf-8",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "name",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "type",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "carrier",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "tech",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "capacity",
-                        "type": "number",
-                        "format": "default"
-                    },
-                    {
-                        "name": "efficiency",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "from_bus",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "to_bus",
-                        "type": "string",
-                        "format": "default"
-                    }
-                ],
-                "missingValues": [
-                    ""
-                ],
-                "primaryKey": "name",
-                "foreignKeys": [
-                    {
-                        "fields": "from_bus",
-                        "reference": {
-                            "resource": "bus",
-                            "fields": "name"
-                        }
-                    },
-                     {
-                        "fields": "to_bus",
-                        "reference": {
-                            "resource": "bus",
-                            "fields": "name"
-                        }
-                    },              
-                    {
-                        "fields": "efficiency",
-                        "reference": {
-                            "resource": "profile_ntk"
-                        }
-                    }
-                ]
-            }
-        },             
+        },              
         {
             "path": "data/elements/conversion_other.csv",
             "profile": "tabular-data-resource",
@@ -474,6 +396,11 @@
                         "format": "default"
                     },
                     {
+                        "name": "storage_losses",
+                        "type": "number",
+                        "format": "default"
+                    },                    
+                    {
                         "name": "type",
                         "type": "string",
                         "format": "default"
@@ -566,9 +493,9 @@
             }
         },       
         {
-            "path": "data/sequences/profile_cop.csv",
+            "path": "data/sequences/profile_efficiency.csv",
             "profile": "tabular-data-resource",
-            "name": "profile_cop",
+            "name": "profile_efficiency",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
@@ -593,7 +520,12 @@
                         "name": "profile_COP_water",
                         "type": "number",
                         "format": "default"
-                    }                                        
+                    },
+                    {
+                        "name": "profile_boiler",
+                        "type": "number",
+                        "format": "default"
+                    }                                            
                 ],
                 "missingValues": [
                     ""
@@ -641,31 +573,6 @@
                 ]
             }
         },
-        {
-            "path": "data/sequences/profile_ntk.csv",
-            "profile": "tabular-data-resource",
-            "name": "profile_ntk",
-            "format": "csv",
-            "mediatype": "text/csv",
-            "encoding": "utf-8",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "timeindex",
-                        "type": "datetime",
-                        "format": "default"
-                    },
-                    {
-                        "name": "profile_NTK",
-                        "type": "number",
-                        "format": "default"
-                    }                                     
-                ],
-                "missingValues": [
-                    ""
-                ]
-            }
-        },  
         {
             "path": "data/sequences/profile_volatile.csv",
             "profile": "tabular-data-resource",

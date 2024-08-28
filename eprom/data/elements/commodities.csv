@@ -1,0 +1,4 @@
+name,bus,carrier,type,amount,marginal_cost
+commodity_gas,bus_gas,gas,commodity,100000000,0.1094
+commodity_firewood,bus_firewood,firewood,commodity,100000000,0.0556
+commodity_woodpellets,bus_woodpellets,woodpellets,commodity,100000000,0.0958

@@ -1,2 +1,0 @@
-name,type,carrier,tech,capacity,efficiency,from_bus,to_bus
-conversion_ntk,conversion,heat,ntk,10000000,profile_NTK,bus_gas,bus_heat
