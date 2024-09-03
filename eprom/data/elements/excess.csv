@@ -1,0 +1,2 @@
+name,type,bus,marginal_cost
+excess_feed_in,excess,bus_electricity,-0.1
