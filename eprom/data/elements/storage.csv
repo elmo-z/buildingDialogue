@@ -1,3 +1,0 @@
-name,carrier,tech,storage_capacity,capacity,storage_capacity_initial,storage_losses,type,bus
-storage_lion,electricity,battery,10,1,0,0,storage,bus_electricity
-storage_heat,heat,tank,60,6,0,0.01,storage,bus_heat

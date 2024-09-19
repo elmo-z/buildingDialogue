@@ -13,7 +13,7 @@ from oemof.tabular.facades import TYPEMAP
 from oemof.tabular.postprocessing import calculations, core
 
 # scenario definition
-SCENARIO = "eprom"
+SCENARIO = "eprom_bhkw_winter"
 DATAPACKAGES_PATH = Path(__file__).parent
 SCENARIO_DATAPACKAGE = DATAPACKAGES_PATH / SCENARIO / "datapackage.json"
 RESULTS_PATH = Path(__file__).parent / "oemof-results"

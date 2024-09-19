@@ -1,3 +1,0 @@
-name,type,carrier,tech,capacity,bus,profile
-volatile_PV,volatile,electricity,pv,2,bus_electricity,profile_PV
-volatile_STH,volatile,heat,solarthermal,10,bus_heat,profile_STH

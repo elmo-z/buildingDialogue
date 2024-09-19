@@ -1,0 +1,7 @@
+name,type,carrier,tech,capacity,efficiency,from_bus,to_bus
+conversion_ehz,conversion,heat,electric heater,100000000,0.95,bus_electricity,bus_heat
+conversion_fws,conversion,heat,exchanger,100000000,0.95,bus_heat,bus_hotwater
+conversion_shk,conversion,heat,boiler,0,0.93,bus_firewood,bus_heat
+conversion_pk,conversion,heat,boiler,0,0.949,bus_woodpellets,bus_heat
+conversion_hgk,conversion,heat,boiler,0,0.942,bus_woodchips,bus_heat
+conversion_dle,conversion,heat,electric heater,0,0.95,bus_electricity,bus_hotwater

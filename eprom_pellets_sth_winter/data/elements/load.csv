@@ -1,0 +1,5 @@
+name,amount,profile,type,bus
+load_electricity,3000,profile_load,load,bus_electricity
+load_heat,12216,profile_heat,load,bus_heat
+load_hotwater,1,profile_hotwater,load,bus_hotwater
+load_STH,10,profile_STH_load,load,bus_electricity

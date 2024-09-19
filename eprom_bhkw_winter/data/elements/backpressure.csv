@@ -1,0 +1,2 @@
+name,type,carrier,tech,fuel_bus,electricity_bus,heat_bus,capacity,electric_efficiency,thermal_efficiency
+backpressure_bhkw,backpressure,gas,bhkw,bus_gas,bus_electricity,bus_heat,100000000,0.343,0.615
